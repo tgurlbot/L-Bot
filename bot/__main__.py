@@ -65,13 +65,12 @@ def stats(update, context):
 
 def start(update, context):
     buttons = ButtonMaker()
-    buttons.buildbutton("Repo", "https://www.github.com/anasty17/mirror-leech-telegram-bot")
-    buttons.buildbutton("Report Group", "https://t.me/+PRRzqHd31XY3ZWZk")
+    buttons.buildbutton("GITHUB", "https://www.github.com/OO7ROBOT")
+    buttons.buildbutton("Creator", "https://t.me/OO7ROBOT")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
-This bot can mirror all your links to Google Drive!
-Type /{BotCommands.HelpCommand} to get a list of available commands
+        A Simple Leech Bot
 '''
         sendMarkup(start_string, context.bot, update.message, reply_markup)
     else:
